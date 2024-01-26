@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+:root {
+    --white: #ffff;
+    --darkblue: #2a324b;
+    --violet: #58699d;
+    --cream: #e1e5ee;
+
+    --font: 'Montserrat';
+
+}
+
+body {
+    background-color: var(--cream);
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    max-width: 80%;
+    overflow: hidden;
+    margin: 10rem auto;
+}
+
+section ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0;
+    margin-bottom: auto;
+    width: 100%;
+
+}
+
+section ul button {
+    background-color: var(--darkblue);
+    padding: 1.5rem 4.5rem;
+    flex: 1;
+    cursor: pointer;
+}
+
+section ul button a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--font);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+section ul button:focus {
+    background-color: var(--white);
+    border: none;
+}
+
+section ul button:focus a {
+    color: var(--darkblue);
+}
+
+main {
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    /* kildereferanse i bunnen av filen */
+    padding: 4rem;
+}
+
+main span {
+    padding: 1rem;
+}
+
+main h2 {
+    font-family: var(--font);
+    font-weight: 800;
+    color: var(--darkblue);
+}
+
+main span {
+    font-family: var(--font);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.resource ul li a {
+    color: var(--violet);
+}
+
+/*
+spørsmål stilt til chatgpt:
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+:root {
+    --white: #ffff;
+    --darkblue: #2a324b;
+    --violet: #58699d;
+    --cream: #e1e5ee;
+
+    --font: 'Montserrat';
+
+}
+
+body {
+    background-color: var(--cream);
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    max-width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+nav {}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0;
+    margin-bottom: auto;
+    width: 100%;
+
+}
+
+nav ul li {
+    background-color: var(--darkblue);
+    padding: 1.5rem 4.5rem;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--font);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+main {
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main span {
+    padding: 1rem;
+}
+
+how do i make the nav and main equal width
+
+svar fra chatgpt:
+To make the nav and main elements equal width, you can use the CSS Flexbox layout. Currently, you have specified a fixed width for the nav ul li elements, but it's better to use a flexible approach.
+
+Here's an updated version of your CSS:
+
+css
+Copy code
+body {
+    background-color: var(--cream);
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    max-width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+nav {}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+nav ul li {
+    flex: 1;  /* Use flex property to distribute space equally among li elements
+    background-color: var(--darkblue);
+    padding: 1.5rem 4.5rem;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--font);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+main {
+    flex: 1; /* Use flex property to make main element take the remaining space
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main span {
+    padding: 1rem;
+}
+In this updated version, I added flex: 1; to both nav ul li and main elements. This allows them to share the available space equally, making them have the same width. The flex property distributes available space based on the value, and setting it to 1 means sharing the space equally
+
+byttet om fra nav til section ul elementer senere for å få js til å funke med buttons 
+*/
